@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.2</title>
+    <style>
+      div {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      let corpo = document.querySelector("body");
+      function createElement(tag){
+        return document.createElement(tag);
+      }
+      function addClass(document, className){
+        document.className = className;
+      }
+      // 1
+      let header1 = createElement("h1");
+      header1.innerHTML = "Exercício 5.2 - JavaScript DOM";
+      corpo.appendChild(header1);
+      // 2
+      let mainContent = createElement("div");
+      mainContent.className = "main-content";
+      corpo.appendChild(mainContent);
+      // 3
+      let centerContent = createElement("div");
+      addClass(centerContent, "center-content");
+      mainContent.appendChild(centerContent);
+      // 4
+      let paragraph = createElement("p");
+      paragraph.innerHTML = "Algum texto qualquer gerado aleatoriamente por mim";
+      centerContent.appendChild(paragraph);
+      // 5
+      let leftContent = createElement("div");
+      addClass(leftContent, "left-content");
+      mainContent.appendChild(leftContent);
+      // 6
+      let rightContent = createElement("div");
+      addClass(rightContent, "right-content");
+      mainContent.appendChild(rightContent);
+      // 7
+      let image = createElement("img");
+      image.src = "https://picsum.photos/200";
+      addClass(image, "small-image");
+      leftContent.appendChild(image);
+      // 8
+      let unorderedList = createElement("ul");
+      for(let i = 1; i <= 10; i += 1){
+        let listItem = createElement("li");
+        listItem.innerHTML = i;
+        unorderedList.appendChild(listItem);
+      }
+      rightContent.appendChild(unorderedList);
+      // 9
+      for(let i = 0; i < 3; i += 1){
+        let header3 = createElement("h3");
+        header3.innerHTML = `Header de número ${i}`;
+        addClass(header3, "description");
+        mainContent.appendChild(header3);
+      }
+      // 10
+      addClass(header1, "title");
+      // 11
+      mainContent.removeChild(leftContent);
+      // 12
+      rightContent.style.marginRight = "auto";
+      // 13
+      mainContent.parentElement.style.backgroundColor = "green";
+      // 14
+      unorderedList.removeChild(unorderedList.lastChild);
+      unorderedList.removeChild(unorderedList.lastChild);
+    </script>
+  </body>
+</html>
