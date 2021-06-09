@@ -44,6 +44,8 @@ function resetText(event) {
   // que retorna o objeto que disparou o evento.
 }
 
+console.log(solution("abc","bc"));
+
 divUm.addEventListener('dblclick', resetText);
 divDois.addEventListener('click', addTechClass);
 input.addEventListener('change', addTextToTech);
