@@ -23,7 +23,7 @@ function stopAllInputs(){
 function appendInputs(curriculum){
   for(let input of inputs){
     let paragraph = document.createElement("h1");
-    paragraph.innerText = input.value;
+    paragraph.innerHTML = input.value;
     curriculum.appendChild(paragraph);
   }
 }
@@ -39,5 +39,17 @@ function setCreateCurriculum(){
     createCurriculum();
   })
 }
+function cleanInputs(){
+  for(let input of inputs){
+    input.value = '';
+  }
+}
+function setCleanButton(){
+  let button = document.querySelector("#clean");
+  button.addEventListener("click", function (event) {
+    cleanInputs();
+  })
+}
+setCleanButton();
 setCreateCurriculum();
 createBrazilStates();
