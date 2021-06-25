@@ -1,0 +1,1 @@
+const warriorDamage = warrior => Math.floor(Math.random() * ((warrior.strength * warrior.weaponDmg) - warrior.strength) + warrior.strength);
