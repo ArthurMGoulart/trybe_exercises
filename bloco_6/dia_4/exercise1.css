@@ -1,0 +1,22 @@
+* {
+  margin: 10px;
+
+}
+body {
+  font-size: xx-large;
+}
+h1 {
+  font-size: 0.8em;
+}
+h2 {
+
+}
+
+img {
+  margin: 50px 20px;
+  max-width: 100%;
+}
+
+figure {
+    margin: 0;
+}

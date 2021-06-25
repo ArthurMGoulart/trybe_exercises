@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="bootstrap-5.0.1-dist/css/bootstrap.min.css">
+</head>
+<body>
+  <fieldset>
+    <label class="form-group" for="name">Nome:
+      <input class="form-control" type="text" name="name" id="name" maxlength="40" required>
+    </label>
+    <label class="form-group" for="email">
+      Email: <input class="form-control" type="email" name="email" id="email" maxlength="50" required>
+    </label>
+    <label class="form-group" for="cpf">
+      CPF: <input class="form-control" type="text" name="cpf" id="cpf" maxlength="11" required>
+    </label>
+    <label class="form-group" for="adress">Endereço: <input class="form-control" type="text" name="adress" id="adress" maxlength="200" required></label>
+    <label class="form-group" for="city">Cidade: <input class="form-control" type="text" name="city" id="city" maxlength="28" required></label>
+    <label class="form-group" for="selectState">
+      Estado:
+      <select name="state" id="selectState" required>
+      </select>
+    </label>
+    <label class="form-check-label" for="home">
+      Casa:
+      <input class="form-check-input" type="radio" name="typeAdress" id="home" required>
+    </label>
+    <label class="form-check-label" for="apartment">
+      Apartamento:
+      <input class="form-check-input" type="radio" name="typeAdress" id="apartment" required>
+    </label>
+  </fieldset>
+
+  <fieldset>
+    <label class="form-group" for="curriculum">Currículo:
+      <textarea name="curriculum" id="curriculum" cols="30" rows="10" maxlength="1000" required></textarea>
+    </label>
+    <label class="form-group" for="role">Cargo:
+      <input class="form-control" type="text" name="role" id="role" maxlength="40" required>
+    </label>
+    <label class="form-group" for="roleDescription">Descrição do cargo:
+      <input class="form-control" type="text" name="roleDescription" id="roleDescription" maxlength="500" required>
+    </label>
+    <label class="form-group" for="startDate">
+      <input class="form-control" type="date" name="startDate" id="startDate" required>
+    </label>
+
+  </fieldset>
+
+  <button type="submit" id="submitCurriculum">Criar Currículo</button>
+  <button id="clean">Limpar</button>
+  <script src="script.js"></script>
+  <script src="bootstrap-5.0.1-dist/js/bootstrap.min.js"></script>
+</body>
+</html>
